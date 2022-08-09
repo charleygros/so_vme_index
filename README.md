@@ -8,6 +8,20 @@ Authors: Charley Gros, Jan Jansen, Candice Untiedt, Tabitha Pearman, Rachel Down
 ```
 ![text15247-6-4-1-6](https://user-images.githubusercontent.com/14353425/183558367-3a14a498-d6da-448c-bb72-cdeec325f57b.png)
 
+## Getting Started
+
+This repo has been tested with Python 3.8. Follow the steps below to use this repo:
+
+1. Clone project: `git clone https://github.com/charleygros/so_vme_index`
+2. Create virtual environment and install packages:
+	```
+	cd so_vme_index/
+	virtualenv -p python3.8 .env
+	source .env/bin/activate
+	pip install -r requirements.txt
+	```
+3. Check the sections below for data preparation and index computation.
+
 ## Data preparation
 
 Example data is provided, see `/example_data`. Please follow how these `csv` files are organised.

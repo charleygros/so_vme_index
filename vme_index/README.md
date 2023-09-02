@@ -1,11 +1,12 @@
 # VME index computation
 
-This repository contains the Python code used to compute the VME indexes presented at [SCAR 2022](https://scar2022.org/), abstract #533:
+This repository contains the Python code used to compute the VME indexes presented in the following article:
 ```
-A multi-criteria index for identifying Vulnerable Marine Ecosystems in the Southern Ocean
+Gros, C., Jansen, J., Untiedt, C., Pearman, T.R., Downey, R., Barnes, D.K., Bowden, D.A., Welsford, D.C. and Hill, N.A., 2023.
+Identifying vulnerable marine ecosystems: an image-based vulnerability index for the Southern Ocean seafloor.
+ICES Journal of Marine Science, 80(4), pp.972-986.
+```
 
-Authors: Charley Gros, Jan Jansen, Candice Untiedt, Tabitha Pearman, Rachel Downey, David K. A. Barnes, David A. Bowden, Dirk C. Welsford, Nicole A. Hill
-```
 ![text15247-6-4-1-6](https://user-images.githubusercontent.com/14353425/183558367-3a14a498-d6da-448c-bb72-cdeec325f57b.png)
 
 ## Getting Started
@@ -24,7 +25,7 @@ This repo has been tested with Python 3.8. Follow the steps below to use this re
 
 ## Data preparation
 
-Example data is provided, see `/example_data`. Please follow how these `csv` files are organised.
+Example data is provided, see `../example_data`. Please follow how these `csv` files are organised.
 
 - `abundance_data.csv`: contains the percentage cover of each studied morpho-taxon inside each grid-cell (see `cellID`): values between 0 and 100. The `area` column contains the sampling effort (e.g. in m^2) inside each grid cell.
 
@@ -36,14 +37,14 @@ Example data is provided, see `/example_data`. Please follow how these `csv` fil
 
 ## Computation
 
-The code is located in `vme_index/compute_vme_index.py`. To see the different parameters' requirements, run:
+The code is located in `compute_vme_index.py`. To see the different parameters' requirements, run:
 ```
-python vme_index/compute_vme_index.py -h
+python compute_vme_index.py -h
 ```
 
 To run the command with the `example_data`:
 ```
-python vme_index/compute_vme_index.py -i example_data/abundance_data.csv -s example_data/vulnerability_scores.csv -o results_example_data.csv
+python compute_vme_index.py -i ../example_data/abundance_data.csv -s ../example_data/vulnerability_scores.csv -o results_example_data.csv
 ```
 
 The output file (here `results_example_data.csv`) contains the abundance-based and the richness-based VME index for each `cellID`.

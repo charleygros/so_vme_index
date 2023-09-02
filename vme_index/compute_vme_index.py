@@ -41,8 +41,8 @@ def quadratic_mean(x):
 
 def compute_vulnerability_score(df_scores, agg_method):
     if agg_method == "ccamlr":
-        df_scores["tmp"] = df_scores[df_scores.keys()[-2:]].mean(axis=1)
-        lst_criteria_agg = [c for c in df_scores.keys() if not c in ["morpho_taxon"] + df_scores.keys()[-3:-1]]
+        df_scores["tmp"] = df_scores[['Longevity', 'Slow growth']].mean(axis=1)
+        lst_criteria_agg = ['Habitat forming', 'Rare or unique', 'Fragility', 'Larval dispersion', 'Sessility', 'tmp']
     else:
         lst_criteria_agg = [c for c in df_scores.keys() if not c in ["morpho_taxon"]]
 

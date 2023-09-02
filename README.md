@@ -1,6 +1,6 @@
 # VME index computation
 
-This repository contains the Python code used to compute the VME indexes presented at SCAR 2022, abstract #533:
+This repository contains the Python code used to compute the VME indexes presented at [SCAR 2022](https://scar2022.org/), abstract #533:
 ```
 A multi-criteria index for identifying Vulnerable Marine Ecosystems in the Southern Ocean
 
